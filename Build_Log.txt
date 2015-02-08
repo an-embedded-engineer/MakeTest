@@ -1,0 +1,24 @@
+Processing app Directory...
+Processing main Directory...
+clang -emit-ast -I../common/inc -I../app/inc -I../app/main/inc  ../app/main/src/app_main.c -o ../out/ast/app/main/src/app_main.ast
+../app/main Build Finished.
+clang -g -O0 -MMD -MP -c -Wall -Wextra -I../common/inc -I../app/inc -I../app/main/inc  ../app/main/src/app_main.c -o ../out/obj/app/main/src/app_main.o
+../app/main Build Finished.
+Done.
+../app Build Finished.
+../app Build Finished.
+Done.
+Processing os Directory...
+Processing main Directory...
+clang -emit-ast -I../common/inc -I../app/inc -I../os/inc -I../os/main/inc  ../os/main/src/main.c -o ../out/ast/os/main/src/main.ast
+../os/main Build Finished.
+clang -g -O0 -MMD -MP -c -Wall -Wextra -I../common/inc -I../app/inc -I../os/inc -I../os/main/inc  ../os/main/src/main.c -o ../out/obj/os/main/src/main.o
+../os/main Build Finished.
+Done.
+../os Build Finished.
+../os Build Finished.
+Done.
+
+Linking ../out/bin/main...
+clang ../out/obj/app/main/src/app_main.o ../out/obj/os/main/src/main.o   -o ../out/bin/main
+../out/bin/main is Generated.
